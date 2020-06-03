@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scene on Volak Sin</title>
+    <link>https://example.com/tags/scene/</link>
+    <description>Recent content in scene on Volak Sin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 May 2020 10:58:08 -0400</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/scene/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 1: Workers&#39; Compensation Estimator</title>
+      <link>https://example.com/post/project-1/</link>
+      <pubDate>Sat, 09 May 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://example.com/post/project-1/</guid>
+      <description>Created a tool that estimates workers compensation claims(MSE~$30k)to help company predict future claims Engineered features from text to help determine specific types of injuries Optimized Linear Lasso, Randon Forest Regressors and XgBoost using GridSearch CV    Graphic of XgBoost Feature importance   Link to Github Repository</description>
+    </item>
+    
+  </channel>
+</rss>
