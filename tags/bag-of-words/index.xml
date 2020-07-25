@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bag of Words on Volak Sin</title>
+    <link>https://volak4.github.io/Volak_Portfolio/tags/bag-of-words/</link>
+    <description>Recent content in Bag of Words on Volak Sin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2020 11:00:59 -0400</lastBuildDate>
+    
+	<atom:link href="https://volak4.github.io/Volak_Portfolio/tags/bag-of-words/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Secret Behind Warren Buffet&#39;s Words</title>
+      <link>https://volak4.github.io/Volak_Portfolio/post/project-2/</link>
+      <pubDate>Fri, 10 Jan 2020 11:00:59 -0400</pubDate>
+      
+      <guid>https://volak4.github.io/Volak_Portfolio/post/project-2/</guid>
+      <description>Warren Buffet is arguably the greatest investor of all time. He is so revered among investors and shareholders that his annual stockholders’ meeting is filled up with stadiums of people; all waiting to hear what the chairman has to say. We took that interest in Warren’s words one step further. We will analyze every word that Warren has written in Berkshire’s annual report and try to make future predictions off them.</description>
+    </item>
+    
+  </channel>
+</rss>

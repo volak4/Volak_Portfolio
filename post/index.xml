@@ -13,22 +13,21 @@
     
     <item>
       <title>Workers&#39; Compensation Estimator</title>
-      <link>https://volak4.github.io/Volak_Portfolio/post/project-wc/</link>
+      <link>https://volak4.github.io/Volak_Portfolio/post/project-1/</link>
       <pubDate>Sat, 09 May 2020 10:58:08 -0400</pubDate>
       
-      <guid>https://volak4.github.io/Volak_Portfolio/post/project-wc/</guid>
+      <guid>https://volak4.github.io/Volak_Portfolio/post/project-1/</guid>
       <description>Created a tool that estimates workers compensation claims(MSE~$30k)to help company predict future claims Engineered features from text to help determine specific types of injuries Optimized Linear Lasso, Randon Forest Regressors and XgBoost using GridSearch CV  SUMMARY &amp;amp; INSIGHTS
 The project task involved analyzing workers’ compensation data. As with most insurance-related data, the distribution of past claims in the training set was highly skewed with a max claim of 3.</description>
     </item>
     
     <item>
-      <title>Chapter II: Pierre Gringoire</title>
+      <title>The Secret Behind Warren Buffet&#39;s Words</title>
       <link>https://volak4.github.io/Volak_Portfolio/post/project-2/</link>
-      <pubDate>Mon, 10 Apr 2017 11:00:59 -0400</pubDate>
+      <pubDate>Fri, 10 Jan 2020 11:00:59 -0400</pubDate>
       
       <guid>https://volak4.github.io/Volak_Portfolio/post/project-2/</guid>
-      <description>Nevertheless, as be harangued them, the satisfaction and admiration unanimously excited by his costume were dissipated by his words; and when he reached that untoward conclusion: “As soon as his illustrious eminence, the cardinal, arrives, we will begin,” his voice was drowned in a thunder of hooting.
-“Begin instantly! The mystery! the mystery immediately!” shrieked the people. And above all the voices, that of Johannes de Molendino was audible, piercing the uproar like the fife’s derisive serenade: “Commence instantly!</description>
+      <description>Warren Buffet is arguably the greatest investor of all time. He is so revered among investors and shareholders that his annual stockholders’ meeting is filled up with stadiums of people; all waiting to hear what the chairman has to say. We took that interest in Warren’s words one step further. We will analyze every word that Warren has written in Berkshire’s annual report and try to make future predictions off them.</description>
     </item>
     
   </channel>
