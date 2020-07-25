@@ -35,11 +35,11 @@
 <meta itemprop="description" content="A tool to estimate workers&#39; compensation payout">
 <meta itemprop="datePublished" content="2020-05-09T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2020-05-09T10:58:08-04:00" />
-<meta itemprop="wordCount" content="44">
+<meta itemprop="wordCount" content="695">
 
 
 
-<meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="XgBoost, GLM," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Project 1: Workers&#39; Compensation Estimator"/>
 <meta name="twitter:description" content="A tool to estimate workers&#39; compensation payout"/>
 
@@ -208,17 +208,36 @@
 <li>Engineered features from text to help determine specific types of injuries</li>
 <li>Optimized Linear Lasso, Randon Forest Regressors and XgBoost using GridSearch CV</li>
 </ul>
+<p>SUMMARY &amp; INSIGHTS</p>
+<p>The project task involved analyzing workers’ compensation data. As with most insurance-related data, the distribution of past claims in the training set was highly skewed with a max claim of 3.7 million and a median claim amount of $446. The nature of claims means a large portion of samples having made no claims or about 17% of the training data had no claims being made. To compound to the number of zero claims being made, many of the features missing values with a handful having a larger than 50% of there values missing.  The frequency severity nature of this model combined with many features missing a significant amount of their values makes selecting the appropriate model more difficult.</p>
+<p>DESCRIPTION</p>
+<p>As this was a workers’ compensation data set, we initially used traditional models applied by the insurance industry. The low frequency and high severity of some of the claims in the data set posed challenges that are common to the insurance industry. We applied the traditional solutions commonly used by the industry such as using a gamma distribution and a Tweedie distribution to try to resolve the non-Gaussian nature of the claim amounts.
+The general strategy to predict future claims was to use the traditional General linearized Model to get a baseline model and then try to improve that model using various types of machine learning algorithms.</p>
+<p>PROCESS OVERVIEW</p>
+<p>The initial phase of building the model involved doing an exploratory analysis of the structure of the data as well as make note of potential oddities within the data. Initial data checks include comparing the mean and variance of feature variables of the training and testing data.<br>
+After the initial data checks, it is observed that the model includes a data set that contains missing values that needed to be dealt with as well as common formatting issues. The most troublesome of the data cleaning involved features with a high proportion of missing values. Unlike data with few missing values where simple imputation strategies of mean replace or data removal could work, this data with an extraordinary amount of missing data required the use of Multivariate Imputation by Chained Equations(MICE).
+Data transformation was done for variables such as time, date, and claim amount. In one of the model iterations, the workers’ compensation claims were logged transformed before modeling. Feature engineering included converting categorical variables into a “top 10” frequency list. Time of day was also feature engineered into work shifts.</p>
+<p><figure>
+    <img src="https://volak4.github.io/Volak_Portfolio/images/Correlation_Heat_Map.png"/> <figcaption>
+            <h4>Correlation Matrix </h4>
+        </figcaption>
+</figure>
+
 <figure>
     <img src="https://volak4.github.io/Volak_Portfolio/images/xgboost.png"/> <figcaption>
             <h4>Graphic of XgBoost Feature importance</h4>
         </figcaption>
 </figure>
-
+</p>
+<p>MODELING PROCESS</p>
+<p>The baseline model used after the data had been cleaned and features had been engineered as a Generalized Linear Model using Tweedie has the distribution parameter. This is common and appropriate in the insurance data since the data has attributes of a Poisson model and a gamma model; with the Tweedie being a hybrid of both. We then tried a random forest model on the data. This model showed improvement so we continue further by “gradient boosting” the model using the popular XgBoost algorithm. The use of the XgBoost algorithm in conjunction with the frequency severity model provided the most improvement.</p>
+<p>MODEL PERFORMANCE</p>
+<p>The model performance on the training data seemed to indicate dramatic improvements in the root mean square error. It is only when we used the model on the testing data that we see a large discrepancy. It can be common with frequency severity models that the prediction errors are quite large when switching from training to testing. In this particular data set, there was a medical claim of almost 4 million dollars; clearly an outlier. The issue is that the testing set may also have an outlier that could dwarf this and we could not model this in the training set. The ensembling of a frequency severity model with an XgBoost algorithm reduced the root mean square error from around 66,000 to around 59,000; a proximately 10% reduction in root mean square error.</p>
 <p><a href="https://github.com/volak4/WorkersCompensation">Link to Github Repository</a></p>
 <ul class="pa0">
   
    <li class="list">
-     <a href="https://volak4.github.io/Volak_Portfolio/tags/scene" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">scene</a>
+     <a href="https://volak4.github.io/Volak_Portfolio/tags/xgboost-glm" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">XgBoost, GLM</a>
    </li>
   
 </ul>
