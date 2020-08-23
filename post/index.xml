@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Workers&#39; Compensation Estimator</title>
+      <title>Workers&#39; Compensation Claim Severity Analysis</title>
       <link>https://volak4.github.io/Volak_Portfolio/post/project-1/</link>
       <pubDate>Sat, 09 May 2020 10:58:08 -0400</pubDate>
       
       <guid>https://volak4.github.io/Volak_Portfolio/post/project-1/</guid>
-      <description>Created a tool that estimates workers compensation claims(MSE~$30k)to help company predict future claims Engineered features from text to help determine specific types of injuries Optimized Linear Lasso, Randon Forest Regressors and XgBoost using GridSearch CV  SUMMARY &amp;amp; INSIGHTS
-The project task involved analyzing workers’ compensation data. As with most insurance-related data, the distribution of past claims in the training set was highly skewed with a max claim of 3.</description>
+      <description>Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp;amp; INSIGHTS
+The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3.</description>
     </item>
     
     <item>

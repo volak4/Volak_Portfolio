@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Workers&#39; Compensation Estimator | Volak Sin</title>
+    <title>Workers&#39; Compensation Claim Severity Analysis | Volak Sin</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.71.1" />
     
@@ -25,23 +25,26 @@
 
     
     
-    <meta property="og:title" content="Workers&#39; Compensation Estimator" />
-<meta property="og:description" content="A tool to estimate workers&#39; compensation payout" />
+    <meta property="og:title" content="Workers&#39; Compensation Claim Severity Analysis" />
+<meta property="og:description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
+The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://volak4.github.io/Volak_Portfolio/post/project-1/" />
 <meta property="article:published_time" content="2020-05-09T10:58:08-04:00" />
 <meta property="article:modified_time" content="2020-05-09T10:58:08-04:00" />
-<meta itemprop="name" content="Workers&#39; Compensation Estimator">
-<meta itemprop="description" content="A tool to estimate workers&#39; compensation payout">
+<meta itemprop="name" content="Workers&#39; Compensation Claim Severity Analysis">
+<meta itemprop="description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
+The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3.">
 <meta itemprop="datePublished" content="2020-05-09T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2020-05-09T10:58:08-04:00" />
-<meta itemprop="wordCount" content="695">
+<meta itemprop="wordCount" content="638">
 
 
 
 <meta itemprop="keywords" content="XgBoost, GLM," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Workers&#39; Compensation Estimator"/>
-<meta name="twitter:description" content="A tool to estimate workers&#39; compensation payout"/>
+<meta name="twitter:title" content="Workers&#39; Compensation Claim Severity Analysis"/>
+<meta name="twitter:description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
+The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3."/>
 
   </head>
 
@@ -143,11 +146,7 @@
 
       <div class="tc-l pv6 ph3 ph4-ns">
         
-          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Workers&#39; Compensation Estimator</h1>
-          
-            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-              A tool to estimate workers&#39; compensation payout
-            </h2>
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Workers&#39; Compensation Claim Severity Analysis</h1>
           
         
       </div>
@@ -180,13 +179,13 @@
 
     
     
-    <a href="https://twitter.com/share?url=https://volak4.github.io/Volak_Portfolio/post/project-1/&amp;text=Workers%27%20Compensation%20Estimator" class="twitter no-underline" aria-label="share on Twitter">
+    <a href="https://twitter.com/share?url=https://volak4.github.io/Volak_Portfolio/post/project-1/&amp;text=Workers%27%20Compensation%20Claim%20Severity%20Analysis" class="twitter no-underline" aria-label="share on Twitter">
       <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
 
     </a>
 
     
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://volak4.github.io/Volak_Portfolio/post/project-1/&amp;title=Workers%27%20Compensation%20Estimator" class="linkedin no-underline" aria-label="share on LinkedIn">
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://volak4.github.io/Volak_Portfolio/post/project-1/&amp;title=Workers%27%20Compensation%20Claim%20Severity%20Analysis" class="linkedin no-underline" aria-label="share on LinkedIn">
       <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
 </svg>
@@ -195,7 +194,7 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Workers&#39; Compensation Estimator</h1>
+      <h1 class="f1 athelas mt3 mb1">Workers&#39; Compensation Claim Severity Analysis</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2020-05-09T10:58:08-04:00">May 9, 2020</time>
@@ -204,19 +203,22 @@
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><ul>
-<li>Created a tool that estimates workers compensation claims(MSE~$30k)to help company predict future claims</li>
-<li>Engineered features from text to help determine specific types of injuries</li>
-<li>Optimized Linear Lasso, Randon Forest Regressors and XgBoost using GridSearch CV</li>
+<li>Created an analysis methodology to help predict future workers’ compensation claim severities</li>
+<li>Engineered features from (add more feature engineering here) text to to improve model performance</li>
+<li>Applied LASSO linear regression, Random Forest,  and optimized XGBoost hyperparameters using cross validation</li>
 </ul>
 <p>SUMMARY &amp; INSIGHTS</p>
-<p>The project task involved analyzing workers’ compensation data. As with most insurance-related data, the distribution of past claims in the training set was highly skewed with a max claim of 3.7 million and a median claim amount of $446. The nature of claims means a large portion of samples having made no claims or about 17% of the training data had no claims being made. To compound to the number of zero claims being made, many of the features missing values with a handful having a larger than 50% of there values missing.  The frequency severity nature of this model combined with many features missing a significant amount of their values makes selecting the appropriate model more difficult.</p>
+<p>The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3.7 million and a median claim amount of $446. A significant (17%)of claims were below the deductible.</p>
+<p>Below is a link to a summary of the data:
+<a href="https://github.com/volak4/1_Summary_Raw_Train.html">Link to Data Summary Graphs</a></p>
 <p>DESCRIPTION</p>
-<p>As this was a workers’ compensation data set, we initially used traditional models applied by the insurance industry. The low frequency and high severity of some of the claims in the data set posed challenges that are common to the insurance industry. We applied the traditional solutions commonly used by the industry such as using a gamma distribution and a Tweedie distribution to try to resolve the non-Gaussian nature of the claim amounts.
-The general strategy to predict future claims was to use the traditional General linearized Model to get a baseline model and then try to improve that model using various types of machine learning algorithms.</p>
+<p>The highly skewed distribution of claim amounts, with a concentration of $0 claims in the data set posed challenges that are common to the insurance industry.
+We applied the traditional linear regression approach commonly used to analyze insurance data, where a log-link frequency generalized linear regression model (GLM) was built using the Poisson error distribution to model the probability that a claim amount exceeded the deductible, and a log-link severity GLM using the gamma error distribution to model the loss amounts exceeding the deductible, and a combined log-link GLM with a Tweedie error distribution to get baseline models, from which we attempted to improve model performance using Random Forest and XGBoost machine learning algorithms.</p>
 <p>PROCESS OVERVIEW</p>
-<p>The initial phase of building the model involved doing an exploratory analysis of the structure of the data as well as make note of potential oddities within the data. Initial data checks include comparing the mean and variance of feature variables of the training and testing data.<br>
-After the initial data checks, it is observed that the model includes a data set that contains missing values that needed to be dealt with as well as common formatting issues. The most troublesome of the data cleaning involved features with a high proportion of missing values. Unlike data with few missing values where simple imputation strategies of mean replace or data removal could work, this data with an extraordinary amount of missing data required the use of Multivariate Imputation by Chained Equations(MICE).
-Data transformation was done for variables such as time, date, and claim amount. In one of the model iterations, the workers’ compensation claims were logged transformed before modeling. Feature engineering included converting categorical variables into a “top 10” frequency list. Time of day was also feature engineered into work shifts.</p>
+<p>We used exploratory data analysis to identify initial patterns and expose any unusual relationships. We observed that the data contained a large proportion of missing values (in which columns), likely due to the need to only collect this data for indemnity claims.
+Unlike where simple imputation strategies would be used to fill in data that might be missing at random, because of the significant number of missing values likely due to a systematic process, we used the Multivariate Imputation by Chained Equations (MICE) technique.
+MICE implements a method to deal with missing data. The package creates multiple imputations (replacement values) for multivariate missing data. The method is based on Fully Conditional Specification, where each incomplete variable is imputed by a separate model.
+The MICE algorithm can impute mixes of continuous, binary, unordered categorical and ordered categorical data. In addition, MICE can impute continuous two-level data, and maintain consistency between imputations by means of passive imputation. Many diagnostic plots are implemented to inspect the quality of the imputations.</p>
 <p><figure>
     <img src="https://volak4.github.io/Volak_Portfolio/images/Correlation_Heat_Map.png"/> <figcaption>
             <h4>Correlation Matrix </h4>
@@ -224,14 +226,14 @@ Data transformation was done for variables such as time, date, and claim amount.
 </figure>
 
 <figure>
-    <img src="https://volak4.github.io/Volak_Portfolio/images/xgboost.png"/> <figcaption>
+    <img src="https://volak4.github.io/Volak_Portfolio/images/Shapley.png"/> <figcaption>
             <h4>Graphic of XgBoost Feature importance</h4>
         </figcaption>
 </figure>
 </p>
 <p>MODELING PROCESS</p>
 <p>The baseline model used after the data had been cleaned and features had been engineered as a Generalized Linear Model using Tweedie has the distribution parameter. This is common and appropriate in the insurance data since the data has attributes of a Poisson model and a gamma model; with the Tweedie being a hybrid of both. We then tried a random forest model on the data. This model showed improvement so we continue further by “gradient boosting” the model using the popular XgBoost algorithm. The use of the XgBoost algorithm in conjunction with the frequency severity model provided the most improvement.</p>
-<p>MODEL PERFORMANCE</p>
+<p>INSIGHTS AND CONCLUSIONS</p>
 <p>The model performance on the training data seemed to indicate dramatic improvements in the root mean square error. It is only when we used the model on the testing data that we see a large discrepancy. It can be common with frequency severity models that the prediction errors are quite large when switching from training to testing. In this particular data set, there was a medical claim of almost 4 million dollars; clearly an outlier. The issue is that the testing set may also have an outlier that could dwarf this and we could not model this in the training set. The ensembling of a frequency severity model with an XgBoost algorithm reduced the root mean square error from around 66,000 to around 59,000; a proximately 10% reduction in root mean square error.</p>
 <p><a href="https://github.com/volak4/WorkersCompensation">Link to Github Repository</a></p>
 <ul class="pa0">
