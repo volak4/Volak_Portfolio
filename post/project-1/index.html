@@ -37,7 +37,7 @@ The project task involved analyzing workers’ compensation claim level loss exp
 The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3.">
 <meta itemprop="datePublished" content="2020-05-09T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2020-05-09T10:58:08-04:00" />
-<meta itemprop="wordCount" content="638">
+<meta itemprop="wordCount" content="660">
 
 
 
@@ -210,7 +210,7 @@ The project task involved analyzing workers’ compensation claim level loss exp
 <p>SUMMARY &amp; INSIGHTS</p>
 <p>The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3.7 million and a median claim amount of $446. A significant (17%)of claims were below the deductible.</p>
 <p>Below is a link to a summary of the data:
-<a href="https://github.com/volak4/1_Summary_Raw_Train.html">Link to Data Summary Graphs</a></p>
+<a href="https://volaksin.com/1_Summary_Raw_Train.html">Link to Data Summary Graphs</a></p>
 <p>DESCRIPTION</p>
 <p>The highly skewed distribution of claim amounts, with a concentration of $0 claims in the data set posed challenges that are common to the insurance industry.
 We applied the traditional linear regression approach commonly used to analyze insurance data, where a log-link frequency generalized linear regression model (GLM) was built using the Poisson error distribution to model the probability that a claim amount exceeded the deductible, and a log-link severity GLM using the gamma error distribution to model the loss amounts exceeding the deductible, and a combined log-link GLM with a Tweedie error distribution to get baseline models, from which we attempted to improve model performance using Random Forest and XGBoost machine learning algorithms.</p>
@@ -220,8 +220,8 @@ Unlike where simple imputation strategies would be used to fill in data that mig
 MICE implements a method to deal with missing data. The package creates multiple imputations (replacement values) for multivariate missing data. The method is based on Fully Conditional Specification, where each incomplete variable is imputed by a separate model.
 The MICE algorithm can impute mixes of continuous, binary, unordered categorical and ordered categorical data. In addition, MICE can impute continuous two-level data, and maintain consistency between imputations by means of passive imputation. Many diagnostic plots are implemented to inspect the quality of the imputations.</p>
 <p><figure>
-    <img src="https://volak4.github.io/Volak_Portfolio/images/Correlation_Heat_Map.png"/> <figcaption>
-            <h4>Correlation Matrix </h4>
+    <img src="https://volak4.github.io/Volak_Portfolio/images/MICE%20Cluster.png"/> <figcaption>
+            <h4>MICE Illustration </h4>
         </figcaption>
 </figure>
 
@@ -231,10 +231,21 @@ The MICE algorithm can impute mixes of continuous, binary, unordered categorical
         </figcaption>
 </figure>
 </p>
-<p>MODELING PROCESS</p>
-<p>The baseline model used after the data had been cleaned and features had been engineered as a Generalized Linear Model using Tweedie has the distribution parameter. This is common and appropriate in the insurance data since the data has attributes of a Poisson model and a gamma model; with the Tweedie being a hybrid of both. We then tried a random forest model on the data. This model showed improvement so we continue further by “gradient boosting” the model using the popular XgBoost algorithm. The use of the XgBoost algorithm in conjunction with the frequency severity model provided the most improvement.</p>
+<p>Feature Engineering Summary:</p>
+<ul>
+<li>Data transformation was done for variables such as time, date, and claim amount.</li>
+<li>In one of the model iterations, the workers’ compensation claims were logged transformed before modeling.</li>
+<li>Converted categorical variables into a “top 10” frequency list.</li>
+<li>Time of day was transformed into work shifts</li>
+</ul>
+<p>MODELING PERFORMANCE</p>
+<p>As mentioned above, we initially used a frequency/severity and Tweedie GLM modeling approaches to establish a baseline, which achieved (63th place on the leaderboard) as measured by root mean squared error (RMSE) on the test data.<br>
+We then attempted to improve this performance using Random Forest and XGBoost modeling techniques, and achieved RMSE to place 57th and 50th place respectively on the leaderboard. The use of the XgBoost algorithm in conjunction with the frequency severity model provided the most improvement.</p>
 <p>INSIGHTS AND CONCLUSIONS</p>
-<p>The model performance on the training data seemed to indicate dramatic improvements in the root mean square error. It is only when we used the model on the testing data that we see a large discrepancy. It can be common with frequency severity models that the prediction errors are quite large when switching from training to testing. In this particular data set, there was a medical claim of almost 4 million dollars; clearly an outlier. The issue is that the testing set may also have an outlier that could dwarf this and we could not model this in the training set. The ensembling of a frequency severity model with an XgBoost algorithm reduced the root mean square error from around 66,000 to around 59,000; a proximately 10% reduction in root mean square error.</p>
+<p>Because the distribution of workers&rsquo; compensation costs is bounded on the lower end — that is, the cost of workers&rsquo; compensation is never less than zero — but ranges widely on the upper end, sometimes into the millions of dollars, the frequency distribution of costs is skewed.
+More specifically, in the following plot of frequency by cost, the distribution of workers&rsquo; compensation costs is right-skewed because the long tail is on the right (and the coefficient of skewness is positive).
+To produce reliable predictions and generalizable results from analyses of healthcare costs, various sophisticated analytic techniques must be used to deal with the right-skewness of the data.
+Among these techniques are transformation of the dependent variable(Log Transform, Square Root Transform, Box-Cox Transform), random forest regression and machine learning.</p>
 <p><a href="https://github.com/volak4/WorkersCompensation">Link to Github Repository</a></p>
 <ul class="pa0">
   
