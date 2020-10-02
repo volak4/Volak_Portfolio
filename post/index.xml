@@ -17,7 +17,7 @@
       <pubDate>Sat, 09 May 2020 10:58:08 -0400</pubDate>
       
       <guid>https://volak4.github.io/Volak_Portfolio/post/project-1/</guid>
-      <description>Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp;amp; INSIGHTS
+      <description>Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from text to to improve model performance and work hours to work shifts. Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp;amp; INSIGHTS
 The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3.</description>
     </item>
     

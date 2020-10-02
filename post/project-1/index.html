@@ -26,24 +26,24 @@
     
     
     <meta property="og:title" content="Workers&#39; Compensation Claim Severity Analysis" />
-<meta property="og:description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
+<meta property="og:description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from text to to improve model performance and work hours to work shifts. Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
 The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://volak4.github.io/Volak_Portfolio/post/project-1/" />
 <meta property="article:published_time" content="2020-05-09T10:58:08-04:00" />
 <meta property="article:modified_time" content="2020-05-09T10:58:08-04:00" />
 <meta itemprop="name" content="Workers&#39; Compensation Claim Severity Analysis">
-<meta itemprop="description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
+<meta itemprop="description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from text to to improve model performance and work hours to work shifts. Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
 The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3.">
 <meta itemprop="datePublished" content="2020-05-09T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2020-05-09T10:58:08-04:00" />
-<meta itemprop="wordCount" content="660">
+<meta itemprop="wordCount" content="681">
 
 
 
 <meta itemprop="keywords" content="XgBoost, GLM," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Workers&#39; Compensation Claim Severity Analysis"/>
-<meta name="twitter:description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from (add more feature engineering here) text to to improve model performance Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
+<meta name="twitter:description" content="Created an analysis methodology to help predict future workers’ compensation claim severities Engineered features from text to to improve model performance and work hours to work shifts. Applied LASSO linear regression, Random Forest, and optimized XGBoost hyperparameters using cross validation  SUMMARY &amp; INSIGHTS
 The project task involved analyzing workers’ compensation claim level loss experience. As with most insurance experience, the distribution of claim severities was highly skewed with a max claim amount of $3."/>
 
   </head>
@@ -204,7 +204,7 @@ The project task involved analyzing workers’ compensation claim level loss exp
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><ul>
 <li>Created an analysis methodology to help predict future workers’ compensation claim severities</li>
-<li>Engineered features from (add more feature engineering here) text to to improve model performance</li>
+<li>Engineered features from text to to improve model performance and work hours to work shifts.</li>
 <li>Applied LASSO linear regression, Random Forest,  and optimized XGBoost hyperparameters using cross validation</li>
 </ul>
 <p>SUMMARY &amp; INSIGHTS</p>
@@ -215,10 +215,10 @@ The project task involved analyzing workers’ compensation claim level loss exp
 <p>The highly skewed distribution of claim amounts, with a concentration of $0 claims in the data set posed challenges that are common to the insurance industry.
 We applied the traditional linear regression approach commonly used to analyze insurance data, where a log-link frequency generalized linear regression model (GLM) was built using the Poisson error distribution to model the probability that a claim amount exceeded the deductible, and a log-link severity GLM using the gamma error distribution to model the loss amounts exceeding the deductible, and a combined log-link GLM with a Tweedie error distribution to get baseline models, from which we attempted to improve model performance using Random Forest and XGBoost machine learning algorithms.</p>
 <p>PROCESS OVERVIEW</p>
-<p>We used exploratory data analysis to identify initial patterns and expose any unusual relationships. We observed that the data contained a large proportion of missing values (in which columns), likely due to the need to only collect this data for indemnity claims.
-Unlike where simple imputation strategies would be used to fill in data that might be missing at random, because of the significant number of missing values likely due to a systematic process, we used the Multivariate Imputation by Chained Equations (MICE) technique.
-MICE implements a method to deal with missing data. The package creates multiple imputations (replacement values) for multivariate missing data. The method is based on Fully Conditional Specification, where each incomplete variable is imputed by a separate model.
-The MICE algorithm can impute mixes of continuous, binary, unordered categorical and ordered categorical data. In addition, MICE can impute continuous two-level data, and maintain consistency between imputations by means of passive imputation. Many diagnostic plots are implemented to inspect the quality of the imputations.</p>
+<p>We used exploratory data analysis to identify initial patterns and expose any unusual relationships.
+We observed that the data contained a large proportion of missing values in ave_wkly_wage, atty_firm_name, martial_status, and #dependents.
+This is likely due to the need to only collect certain data for indemnity claims rather than medical-only claims. Unlike where simple imputation strategies would be used to fill in data that might be missing at random, because of the significant number of missing values likely due to a systematic process, we used the Multivariate Imputation by Chained Equations (MICE) technique which. creates multiple imputations (replacement values) for multivariate missing data.
+The method is based on Fully Conditional Specification, where each incomplete variable is imputed by separate models built sequentially. Diagnostic plots were implemented to inspect the quality of the imputations, as illustrated by the following:</p>
 <p><figure>
     <img src="https://volak4.github.io/Volak_Portfolio/images/MICE%20Cluster.png"/> <figcaption>
             <h4>MICE Illustration </h4>
@@ -232,17 +232,15 @@ The MICE algorithm can impute mixes of continuous, binary, unordered categorical
 </figure>
 </p>
 <p>Feature Engineering Summary:</p>
-<ul>
-<li>Data transformation was done for variables such as time, date, and claim amount.</li>
-<li>In one of the model iterations, the workers’ compensation claims were logged transformed before modeling.</li>
-<li>Converted categorical variables into a “top 10” frequency list.</li>
-<li>Time of day was transformed into work shifts</li>
-</ul>
+<p>A data transformation was done for variables such as time, date, and claim amount. In the case of work hours, the times were converted into work shifts.
+The dates in the data were original in string format and had to be converted into a standard date format.
+In one iterations of the model, the workers’ compensation claims were logged transformed before modeling. This did not make a significant impact in the model.
+Another feature engineering strategy involved converting categorical variables into a “top 10” frequency list. This also did not significantly affect model performance.</p>
 <p>MODELING PERFORMANCE</p>
 <p>As mentioned above, we initially used a frequency/severity and Tweedie GLM modeling approaches to establish a baseline, which achieved (63th place on the leaderboard) as measured by root mean squared error (RMSE) on the test data.<br>
 We then attempted to improve this performance using Random Forest and XGBoost modeling techniques, and achieved RMSE to place 57th and 50th place respectively on the leaderboard. The use of the XgBoost algorithm in conjunction with the frequency severity model provided the most improvement.</p>
 <p>INSIGHTS AND CONCLUSIONS</p>
-<p>Because the distribution of workers&rsquo; compensation costs is bounded on the lower end — that is, the cost of workers&rsquo; compensation is never less than zero — but ranges widely on the upper end, sometimes into the millions of dollars, the frequency distribution of costs is skewed.
+<p>Since the distribution of workers&rsquo; compensation costs is bounded on the lower end — that is, the cost of workers&rsquo; compensation is never less than zero — but ranges widely on the upper end, sometimes into the millions of dollars, the frequency distribution of costs is skewed.
 More specifically, in the following plot of frequency by cost, the distribution of workers&rsquo; compensation costs is right-skewed because the long tail is on the right (and the coefficient of skewness is positive).
 To produce reliable predictions and generalizable results from analyses of workers&rsquo; compensation costs, various sophisticated analytic techniques must be used to deal with the right-skewness of the data.
 Among these techniques are transformation of the dependent variable(Log Transform, Square Root Transform, Box-Cox Transform), random forest regression and XGBoost.</p>
